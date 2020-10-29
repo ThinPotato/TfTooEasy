@@ -5,11 +5,15 @@ from computerEyes import ComputerEyes
 from virtualBoard import VirtualBoard
 from collections import defaultdict
 from computerInput import ComputerInput
+import sched
+import time
 
 
 class Build:
 
     def __init__(self):
+        self.CE = ComputerEyes()
+
         # List of characters that are already at max level
         self.goldList = []
 
@@ -23,6 +27,16 @@ class Build:
         self.priorityBoard = VirtualBoard()
         # Current board contains the live reading of what is on the board
         self.currentBoard = VirtualBoard()
+        # Creates a Scheduler to check for a round start
+        self.s = sched.scheduler(time.time, time.sleep)
+        self.s.enter(60, 1, self.planningCheck, (self.s,))
+        self.s.run()
+
+    # takes a screenshot every second and checks if the round started.
+    # TODO: react to round starting by calling playTurn()
+    def planningCheck(self, sc):
+        self.CE.checkForRoundStart()
+        self.s.enter(1, 1, self.planningCheck, (sc,))
 
     # Turn playbook:
     # 1. Buy characters
