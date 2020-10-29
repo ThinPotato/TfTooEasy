@@ -32,6 +32,7 @@ class Build:
     # 5. buy Exp (if on turn xth turn)
     def playTurn(self):
         self.buyCharacters()
+        self.placeCharacters()
 
     # Places any matches from bench to map
     # TODO: account for better star ratings
