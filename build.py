@@ -28,9 +28,9 @@ class Build:
         # Current board contains the live reading of what is on the board
         self.currentBoard = VirtualBoard()
         # Creates a Scheduler to check for a round start
-        self.s = sched.scheduler(time.time, time.sleep)
-        self.s.enter(60, 1, self.planningCheck, (self.s,))
-        self.s.run()
+        # self.s = sched.scheduler(time.time, time.sleep)
+        # self.s.enter(60, 1, self.planningCheck, (self.s,))
+        # self.s.run()
 
     # takes a screenshot every second and checks if the round started.
     # TODO: react to round starting by calling playTurn()

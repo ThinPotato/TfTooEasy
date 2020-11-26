@@ -7,3 +7,6 @@ Teamfight Tactics bot that simply follows whatever's meta
 - [ ] Remember what the current board and bench look like *(Implemented, needs testing)*
 - [ ] Play a turn
 - [ ] build first working version
+- [ ] Search internet for meta builds
+- [ ] Use carousel
+- [ ] Put items on characters

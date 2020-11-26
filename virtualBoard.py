@@ -7,10 +7,10 @@ class VirtualBoard:
     def __init__(self):
         # 4x7 2d array containing characters or null
         self.board = [
-            [None * 7],
-            [None * 7],
-            [None * 7],
-            [None * 7]]
+            [None] * 7,
+            [None] * 7,
+            [None] * 7,
+            [None] * 7]
         # 1*9 array containing characters or null
         self.bench = [None] * 9
 

@@ -20,7 +20,7 @@ class ComputerInput:
             pyautogui.moveTo(self.buyX * 4, self.buyY)
         elif location == 4:
             pyautogui.moveTo(self.buyX * 5, self.buyY)
-        pyautogui.click
+        pyautogui.click()
 
     def refreshStore():
         pyautogui.press("d")
@@ -30,16 +30,16 @@ class ComputerInput:
 
     def sellCharacterFrombench(self, benchLocation=0):
         pyautogui.moveTo(self.benchX * benchLocation + 1, self.benchY)
-        pyautogui.click
+        pyautogui.click()
         pyautogui.moveTo(1000, 1070)
-        pyautogui.click
+        pyautogui.click()
 
     def benchToMap(self, benchLocation, mapX, mapY):
         position = self.mapPositionResolver(mapX, mapY)
         pyautogui.moveTo(self.benchX * benchLocation + 1, self.benchY)
-        pyautogui.click
+        pyautogui.click()
         pyautogui.moveTo(position[0], position[1])
-        pyautogui.click
+        pyautogui.click()
 
     def mapPositionResolver(self, x, y):
         finalX = -1
