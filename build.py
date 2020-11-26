@@ -35,8 +35,9 @@ class Build:
     # takes a screenshot every second and checks if the round started.
     # TODO: react to round starting by calling playTurn()
     def planningCheck(self, sc):
-        self.CE.checkForRoundStart()
-        self.s.enter(1, 1, self.planningCheck, (sc,))
+        if self.CE.checkForRoundStart():
+            self.playTurn()
+        self.s.enter(1, 1, self.planningCheck, (self, sc,))
 
     # Turn playbook:
     # 1. Buy characters
