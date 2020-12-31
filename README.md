@@ -1,5 +1,7 @@
 # TfTooEasy
-Teamfight Tactics bot that simply follows whatever's meta
+A program that uses machine learning and OCR to automatically play a round of Team Fight Tactcs.
+
+This project is not intended to be used as a tool to rank up an account or abuse ranked matchmaking. It only exists as a proof of concept and a passion project.
 
 - [X] Interact with tft game
 - [ ] Read and Parse what characters are for sell *(Implemented, needs testing)*
